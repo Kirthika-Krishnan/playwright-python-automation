@@ -1,11 +1,9 @@
-# login_page.py
 from base_page import BasePage
-from playwright.sync_api import expect
+from config import BASE_URL
 
 class LoginPage(BasePage):
-    URL = "https://www.saucedemo.com"
+    URL = BASE_URL   # <-- was a hardcoded string, now pulled from config
 
-    # Locators as class properties — defined once, used everywhere
     USERNAME_INPUT = "#user-name"
     PASSWORD_INPUT = "#password"
     LOGIN_BUTTON = "#login-button"
